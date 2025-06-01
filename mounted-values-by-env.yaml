@@ -1,0 +1,37 @@
+cm: 
+  configMapData: 
+    props: 
+     environment: local
+     redis:
+      type: REDIS
+      site: localhost:6379
+      protocol: redis
+      sessionTtl: 60
+      cacheTtl: 60
+      socket:
+       timeout: 5000
+       connectTimeout: 5000
+     kafka-site:
+        type: KAFKA
+        bootstrapServers:
+         - localhost:9092
+        allowedTopics:
+         # Graph Builder
+         - ztm.graph.profile.build
+         - ztm.graph.profile.build.result
+         # Image Scan
+         - ztm.graph.image.scan
+         - ztm.graph.image.scan.result
+
+         # Logs
+         - ztm.logging
+     neo4j:
+       uri: bolt://localhost:7687
+       username: neo4j
+       password: test1234
+       database: neo4j     # ברירת מחדל, אם אתה לא משתמש ב-multidb
+       driverConfig:
+        maxConnectionPoolSize: 100
+        connectionTimeout: 5000         # ms
+        encrypted: false
+        trustStrategy: TRUST_ALL_CERTIFICATES
