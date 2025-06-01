@@ -26,6 +26,7 @@ cm:
          # Logs
          - ztm.logging
      neo4j:
+       type: NEO4J
        uri: bolt://localhost:7687
        username: neo4j
        password: test1234
