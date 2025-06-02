@@ -16,13 +16,6 @@ cm:
         bootstrapServers:
          - localhost:9092
         allowedTopics:
-         # Graph Builder
-         - ztm.graph.profile.build
-         - ztm.graph.profile.build.result
-         # Image Scan
-         - ztm.graph.image.scan
-         - ztm.graph.image.scan.result
-
          # Logs
          - ztm.logging
      neo4j:
