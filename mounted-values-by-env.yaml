@@ -27,7 +27,8 @@ cm:
          - ztm.logging
      neo4j:
        type: NEO4J
-       uri: bolt://localhost:7687
+       protocol: bolt
+       site: bolt://localhost:7687
        username: neo4j
        password: test1234
        database: neo4j     # ברירת מחדל, אם אתה לא משתמש ב-multidb
