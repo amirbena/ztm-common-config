@@ -16,19 +16,12 @@ cm:
         bootstrapServers:
          - localhost:9092
         allowedTopics:
-         # Graph Builder
-         - ztm.graph.profile.build
-         - ztm.graph.profile.build.result
-         # Image Scan
-         - ztm.graph.image.scan
-         - ztm.graph.image.scan.result
-
          # Logs
          - ztm.logging
      neo4j:
        type: NEO4J
        protocol: bolt
-       site: bolt://localhost:7687
+       site: localhost:7687
        username: neo4j
        password: test1234
        database: neo4j     # ברירת מחדל, אם אתה לא משתמש ב-multidb
